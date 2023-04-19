@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>isprf</title>
+</head>
+<body>
+<script>
+   const reverseInt = (num) => {
+let arr = num.toString().split('');
+
+let minusInt = arr.findIndex(el => {
+return el === '-';
+})
+let arrFiltered = arr.filter(el => {
+return el !== '-';
+})
+let arrReversed = arrFiltered.reverse();
+
+if(minusInt >= 0) {
+arrReversed.splice(minusInt, 0, '-')
+}
+return +arrReversed.join('');
+}
+
+
+</script>
+</body>
+</html>
